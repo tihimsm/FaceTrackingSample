@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    var faceTracker: FaceTracker? = nil
+    @IBOutlet weak var cameraView: UIView!
+    
+    var rectView = UIView()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.rectView.layer.borderWidth = 3
+        self.view.addSubview(self.rectView)
+        faceTracker = FaceTracker(
+            view: self.cameraView,
+            findFace: { array in
+                guard let rect = array.first else { return }
+                self.rectView.frame = rect
+        })
     }
-
-
 }
 

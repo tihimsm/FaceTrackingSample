@@ -15,6 +15,7 @@
 		BEC550CB25356BE700DFD3E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEC550C925356BE700DFD3E6 /* LaunchScreen.storyboard */; };
 		BEC550D625356BE800DFD3E6 /* FaceTrackingSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC550D525356BE800DFD3E6 /* FaceTrackingSampleTests.swift */; };
 		BEC550E125356BE800DFD3E6 /* FaceTrackingSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC550E025356BE800DFD3E6 /* FaceTrackingSampleUITests.swift */; };
+		BEC550F025356DC800DFD3E6 /* FaceTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC550EF25356DC800DFD3E6 /* FaceTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		BEC550DC25356BE800DFD3E6 /* FaceTrackingSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FaceTrackingSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC550E025356BE800DFD3E6 /* FaceTrackingSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTrackingSampleUITests.swift; sourceTree = "<group>"; };
 		BEC550E225356BE800DFD3E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC550EF25356DC800DFD3E6 /* FaceTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BEC550BE25356BE600DFD3E6 /* AppDelegate.swift */,
+				BEC550EE25356DB900DFD3E6 /* Common */,
 				BEC550C025356BE600DFD3E6 /* SceneDelegate.swift */,
 				BEC550C225356BE600DFD3E6 /* ViewController.swift */,
 				BEC550C425356BE600DFD3E6 /* Main.storyboard */,
@@ -126,6 +129,14 @@
 				BEC550E225356BE800DFD3E6 /* Info.plist */,
 			);
 			path = FaceTrackingSampleUITests;
+			sourceTree = "<group>";
+		};
+		BEC550EE25356DB900DFD3E6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BEC550EF25356DC800DFD3E6 /* FaceTracker.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				BEC550C325356BE600DFD3E6 /* ViewController.swift in Sources */,
 				BEC550BF25356BE600DFD3E6 /* AppDelegate.swift in Sources */,
 				BEC550C125356BE600DFD3E6 /* SceneDelegate.swift in Sources */,
+				BEC550F025356DC800DFD3E6 /* FaceTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,14 +446,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HYJ293PKPL;
 				INFOPLIST_FILE = FaceTrackingSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tihimsm.FaceTrackingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = tihimsm.no.FaceTrackingSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -451,14 +466,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HYJ293PKPL;
 				INFOPLIST_FILE = FaceTrackingSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tihimsm.FaceTrackingSample;
+				PRODUCT_BUNDLE_IDENTIFIER = tihimsm.no.FaceTrackingSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
