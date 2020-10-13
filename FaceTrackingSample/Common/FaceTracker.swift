@@ -101,7 +101,12 @@ extension FaceTracker: AVCaptureVideoDataOutputSampleBufferDelegate {
                 context: nil,
                 options: [CIDetectorAccuracy: CIDetectorAccuracyLow])!
             
-            let faces = detector.features(in: ciImage) as NSArray
+            let trackingOptions = [
+                CIDetectorSmile: true,
+                CIDetectorEyeBlink: true,
+            ]
+
+            let faces = detector.features(in: ciImage, options: trackingOptions) as NSArray
             
             guard faces.count != 0 else {
                 return
@@ -111,6 +116,7 @@ extension FaceTracker: AVCaptureVideoDataOutputSampleBufferDelegate {
             var _ = CIFaceFeature()
             
             for feature in faces {
+                print("mousePosition:  \(String(describing: (feature as AnyObject).faceAngle))")
                 var faceRect: CGRect = (feature as AnyObject).bounds
                 let widthPer: CGFloat = self.view.bounds.width / image.size.width
                 let heightPer: CGFloat = self.view.bounds.height / image.size.height
